@@ -1,0 +1,14 @@
+name: duello
+version: 1.0
+main: it.cerebotani.Main
+
+commands:
+  duello:
+    description: "Comando per il duello"
+    usage: "/duello <giocatore>"
+  custommap:
+    description: "Comando per la mappa verso la tazza dorata"
+    usage: "/custommap"
+
+listeners:
+  - it.cerebotani.commands.Duello
