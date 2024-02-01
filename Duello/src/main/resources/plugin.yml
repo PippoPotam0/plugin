@@ -6,9 +6,14 @@ commands:
   duello:
     description: "Comando per il duello"
     usage: "/duello <giocatore>"
+
   custommap:
     description: "Comando per la mappa verso la tazza dorata"
     usage: "/custommap"
+
+  orbitalcannon:
+    description: "Comando per annientare"
+    usage: "/orbitalcannon"
 
 listeners:
   - it.cerebotani.commands.Duello

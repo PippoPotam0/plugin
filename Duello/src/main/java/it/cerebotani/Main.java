@@ -1,5 +1,6 @@
 package it.cerebotani;
 
+import it.cerebotani.commands.CannoneOrbitale;
 import it.cerebotani.commands.CustomMap;
 import it.cerebotani.commands.Duello;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -18,6 +19,7 @@ public class Main extends JavaPlugin {
         logger.info("QUALCUNO HA RICHIESTO UN DUELLO LANCIANDO UN GUANTO");
         getCommand("duello").setExecutor(duello);
         getCommand("custommap").setExecutor(new CustomMap());
+        getCommand("orbitalcannon").setExecutor(new CannoneOrbitale(this));
     }
 
     @Override
