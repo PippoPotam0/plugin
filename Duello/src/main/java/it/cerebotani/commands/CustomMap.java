@@ -26,7 +26,7 @@ public class CustomMap implements CommandExecutor {
         }
         Player player = (Player) sender;
 
-        if (label.equalsIgnoreCase("customMap")) {
+        if (label.equalsIgnoreCase("custommap")) {
             ItemStack mapItem = createCustomMap();
             player.getInventory().addItem(mapItem);
             player.sendMessage("Hai ricevuto una mappa personalizzata!");

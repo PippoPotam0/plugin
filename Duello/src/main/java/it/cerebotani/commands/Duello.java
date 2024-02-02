@@ -90,6 +90,14 @@ public class Duello implements CommandExecutor, Listener {
             if(isDuelActive) {
                 if (player.equals(p) || player.equals(target)) {
                     if (e.getFinalDamage() >= player.getHealth()) {
+                        if(player.equals(p)) {
+                            p.sendMessage("Hai vinto il duello");
+                            target.sendMessage("Hai perso il duello");
+                        }
+                        if(player.equals(target)) {
+                            target.sendMessage("Hai vinto il duello");
+                            p.sendMessage("Hai perso il duello");
+                        }
                         e.setCancelled(true);
                         onEnd(p);
                         onEnd(target);
@@ -203,14 +211,6 @@ public class Duello implements CommandExecutor, Listener {
                 block2.setType(muro);  // Blocco invisibile
             }
         }
-        /*
-        for (int x = platformStartX; x <= platformEndX; x++){
-            for(int z = platformStartZ; z <= platformEndZ; z++){
-                Block block = world.getBlockAt(x, platformHeight + 5, z);
-                block.setType(muro);
-            }
-        }
 
-         */
     }
 }
